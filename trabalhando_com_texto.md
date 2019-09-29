@@ -46,7 +46,7 @@ var config = {
 var game = new Phaser.Game(config);
 
 function create() {
-  this.texto = this.add.text(400, 300, 'contagem: 0', {
+  this.texto = this.add.text(400, 300, 'Trabalhando com texto', {
     fontSize: 40,
     fontFamily: "Arial"
   })
