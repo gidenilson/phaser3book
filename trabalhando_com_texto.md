@@ -55,7 +55,7 @@ function create() {
   this.texto.setOrigin(0.5);
 }
 ````
-Como você pode observer, além da criação do texto com ``this.add.text``, temos mais 3 linhas de código que chamam métodos que transformam o texto. O objeto ``Phaser.GameObjects.Text`` possui ainda muitos outros métodos. Para conhecer todos volte a consultar a documentação e faça testes com cada um dos métodos.
+Como você pode observar, além da criação do texto com ``this.add.text``, temos mais 3 linhas de código que chamam métodos que transformam o texto. O objeto ``Phaser.GameObjects.Text`` possui ainda muitos outros métodos. Para conhecer todos volte a consultar a documentação e faça testes com cada um dos métodos.
 
 Agora vamos fazer uma brincadeira. Crie outro arquivo javascript, por exemplo game2.js, e insira o seguinte código:
 
