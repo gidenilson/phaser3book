@@ -1,4 +1,4 @@
-[!INCLUDE[sample include file]([ambiente_de_desenvolvimento.md](https://github.com/gidenilson/phaser3book/blob/master/ambiente_de_desenvolvimento.md "ambiente_de_desenvolvimento.md"))]
+![INCLUDE[sample include file]([ambiente_de_desenvolvimento.md](https://github.com/gidenilson/phaser3book/blob/master/ambiente_de_desenvolvimento.md ))]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY3MzQ2OTc2LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTI5MDgxNjI5OSwtMjA4ODc0NjYxMl19
 -->
