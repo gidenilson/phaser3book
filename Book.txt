@@ -1,6 +1,0 @@
-```include
-introducao.md
-littera.md
-relative/to/the/command/root.md
-#do/not/include/this.md
-```
