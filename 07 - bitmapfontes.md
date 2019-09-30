@@ -70,6 +70,6 @@ Isto irá imprimir "Minha Fonte" na tela do jogo.
 
 Para alterar o texto do objeto bitmapText criado utilize o método ``this.texto.setText('Outro texto aqui')``
 
-A partir de um arquivo de webfont podemos criar nossos arquivos ``font.png`` e ``font.fnt``, usando para isso um aplicativo.
+A partir de um arquivo de webfont (ttf) podemos criar nossos arquivos ``font.png`` e ``font.fnt``, usando para isso um aplicativo.
 
-Vamos neste curso apresentar dois aplicativos para essa finalidade: o  Bitmap Font Generator que roda na sua máquina, e um aplicativo on-line denominado Littera acessível em ``http://kvazars.com/littera``
+Vamos neste curso apresentar dois aplicativos para essa finalidade: um aplicativo on-line denominado Littera acessível em ``http://kvazars.com/littera``, e o  Bitmap Font Generator que roda na sua máquina e pode ser baixado em ``http://www.angelcode.com/products/bmfont``

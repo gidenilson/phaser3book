@@ -62,7 +62,7 @@ Com este código teremos o seguinte na tela:
 
 ![fig 2](resources/img/fig002.png)
 
-Ou seja, só uma quadro peto na tela. Mas se abrirmos o console do desenvolvedor no browser veremos que o Phaser já está rodando:
+Ou seja, só uma quadro preto na tela. Mas se abrirmos o console do desenvolvedor no browser veremos que o Phaser já está rodando:
 
 ![fig 3](resources/img/fig003.png)
 
