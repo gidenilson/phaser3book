@@ -26,6 +26,7 @@ PLUGIN SYSTEM,
 MOBILE BROWSER,
 DEVELOPER SUPPORT,
 WEB FIRST
+
 ## Multiplataforma
 
 Uma grande vantagem no desenvolvimento de jogos em HTML5 é a possibilidade de publicar os jogos para várias plataformas com apenas o mesmo código. Um jogo desenvolvido com o Phaser pode ser exportado para iOS, Android, browser e etc.
