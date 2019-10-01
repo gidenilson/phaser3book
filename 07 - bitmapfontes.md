@@ -6,11 +6,11 @@ Por exemplo:
 
 imagem font.png
 
-![](resources/img/fig008.png)
+![fig 8](resources/img/fig008.png)
 
 arquivo xml font.fnt
 
-![](resources/img/fig009.png)
+![fig 9](resources/img/fig009.png)
 
 Bitmap fontes são muito fáceis de serem utilizadas no Phaser. A classe responsável por essa feature é ``Phaser.GameObjects.BitmapText``.
 
