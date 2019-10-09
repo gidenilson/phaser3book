@@ -10,15 +10,15 @@ Para utilizar uma imagem a primeira coisa a fazer é carregar tal imagem para o 
 
 Exemplo:
 
-````javascript
+```javascript
 function preload ()
 {
   this.load.image('logo', 'images/logotipo.png')
 }
-````
+```
 Ao invés de passar argumentos, podemos passar um objeto de configuração para carregar a imagem.
 
-````javascript
+```javascript
 function preload()
 {
   this.load.image({
@@ -26,19 +26,19 @@ function preload()
     url: 'images/logotipo.png'
   })
 }
-````
+```
 Para mais detalhes sobre o objeto de configuração de imagem, procure na documentação do Phaser por ``Phaser.Types.Loader.FileTypes.ImageFileConfig``.
 
 Depois do carregamento, podemos utilizar a imagem na nossa cena chamando o método ``this.add.image(x, y, key)``.
 
 Exemplo:
 
-````javascript
+```javascript
 function create()
 {
   this.add.image(x, y, 'logo')
 }
-````
+```
 Um sprite é uma instância da classe ``Phaser.GameObjects.Sprite``
 É um objeto usado para mostrar imagens estáticas ou animados em nosso game. Assim como as imagens, os sprites podem receber eventos de mouse (ou touch) e podem ganhar corpos físicos. Tabém podem trabalhar com tween e scroll.
 
@@ -50,9 +50,9 @@ Uma vez que a imagem já foi carregada no método ``preload()`` criamos o sprite
 
 Exemplo:
 
-````javascript
+```javascript
 function create()
 {
   this.add.sprite(x, y, 'imagem')
 }
-````
+```

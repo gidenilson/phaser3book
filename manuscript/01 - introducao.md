@@ -42,10 +42,3 @@ Outra coisa importante a ser dita é que qualquer engine de jogos tem seus ponto
 Quero dizer com isso que quando utilizamos qualquer engine de jogos, devemos conhecer os pontos fracos e fortes, e procurar trabalhar em cima desses pontos fortes.
 
 Para se ter uma ideia do que é feito com o Phaser, visite o blog do site (http://phaser.io/news) e navegue nos exemplos de features da engine (http://phaser.io/examples).
-
-```javascript
-var x = 100
-function modelo(arg) {
-  console.log(arg)
-}
-```

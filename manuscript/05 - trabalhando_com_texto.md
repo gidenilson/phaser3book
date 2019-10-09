@@ -8,9 +8,9 @@ Impact``.
 Para criar textos simples no Phaser precisamos instanciar a classe ``Phaser.GameObjects.Text``.
 A instanciação é feita com a ajuda do método ``add.text`` disponível na nossa scene. Por exemplo:
 
-````javascript
+```javascript
 this.add.text(0, 0, 'Hello World', { fontFamily: 'Arial' });
-````
+```
 Onde passamos os parâmetros ``(x, y, text, style)``. ``x e y`` é o posicionamento do texto na tela, ``text`` é o texto propriamente dito, ``style`` é um objeto de configuração com os seguintes parâmetros:
 
 ``fontFamily, fontSize, fontStyle, backgroundColor, color, stroke, strokeThickness, shadow, padding, align, maxLines, fixedWidth,
@@ -22,7 +22,7 @@ Durante o curso utilizaremos algumas dessas propriedades. Mas se você quiser de
 Para experimentar as formas de trabalhar com texto no Phaser utilizaremos uma pequena estrutura com 2 arquivos: ``index.html`` e ``game.js``. Então crie uma pasta e coloque dentro estes 2 arquivos.
 
 ``index.html``
-````html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,9 +34,9 @@ Para experimentar as formas de trabalhar com texto no Phaser utilizaremos uma pe
     <script src="game.js"></script>
   </body>
 </html>
-````
+```
 ``game.js``
-````javascript
+```javascript
 var config = {
   type: Phaser.AUTO,
   scene: {
@@ -54,12 +54,12 @@ function create() {
   this.texto.setShadow(2, 2, "#333333", 2, true, true);
   this.texto.setOrigin(0.5);
 }
-````
+```
 Como você pode observar, além da criação do texto com ``this.add.text``, temos mais 3 linhas de código que chamam métodos que transformam o texto. O objeto ``Phaser.GameObjects.Text`` possui ainda muitos outros métodos. Para conhecer todos volte a consultar a documentação e faça testes com cada um dos métodos.
 
 Agora vamos fazer uma brincadeira. Crie outro arquivo javascript, por exemplo game2.js, e insira o seguinte código:
 
-````javascript
+```javascript
 var config = {
   type: Phaser.AUTO,
   scene: {
@@ -106,9 +106,9 @@ var fonts = [
 "Arial Black",
 "Impact",
 ];
-````
+```
 Agora dê um refresh (CTRL F5) no browser e clique com o mouse no texto.
 Não esqueça de alterar o nome o script no arquivo html.
-````<script src="game2.js"></script>````
+```<script src="game2.js"></script>```
 
 Isto é só um exemplo para você começar a perceber o que pode ser feito com o Phaser. Se este código não está claro agora para você, não se preocupe; vamos ver o que significa tudo isso no decorrer do curso.

@@ -6,20 +6,20 @@ Como exemplo vamos incluir e utilizar a fonte Mansalva que pode ser encontrada n
 
 Vamos criar a seguinte estrutura de pasta e arquivos:
 
-````
+```
 + webfontes
   + font
     - Mansalva-Regular.ttf
   - index.html
   - game.js
 
-````
+```
 
 Nossa webfonte está localizada dentro da pasta font.
 
 Agora coloque o seguinte código dentro do index.html:
 
-````html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +40,11 @@ Agora coloque o seguinte código dentro do index.html:
 
 </body>
 </html>
-````
+```
 
 E no game.js:
 
-````javascript
+```javascript
 var config = {
   type: Phaser.AUTO,
   scene: {
@@ -63,7 +63,7 @@ function create() {
   this.texto.setShadow(2, 2, "#333333", 2, true, true)
   this.texto.setOrigin(0.5)
 }
-````
+```
 
 Rode o http-server na pasta onde está o index.html, acesse ``http://localhost:8080/index.html`` e dê um refresh no browser.
 

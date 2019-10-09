@@ -8,7 +8,7 @@ Na figura temos um exemplo de como podemos estruturar as cenas de um jogo. Temos
 
 Também é um bom momento dizer que todas as scenes do jogo podem ter 4 métodos especiais: ``init(), preload(), create(), update()``.
 
-````javascript
+```javascript
 class BootScene extends Phaser.Scene {
   constructor() {
     super('Boot');
@@ -28,7 +28,7 @@ class BootScene extends Phaser.Scene {
     // code
   }
 }
-````
+```
 
 
 O método ``init()`` é o primeiro bloco a ser executado na inicialização da scene. Neste bloco podemos colocar nossas variáveis de inicialização.
@@ -42,7 +42,7 @@ Esses 3 métodos são executados uma vez na chamada da scene. Mas o próximo mé
 ## Código mínimo
 Como já dissemos anteriormente, um jogo em Phaser pode ser um único arquivo de código. Vamos então nesse momento ver como fica o código mínimo para um jogo nascer:
 
-````javascript
+```javascript
 var config = {
     type: Phaser.AUTO,
     width: 800,
@@ -56,7 +56,7 @@ function create ()
 {
   // code
 }
-````
+```
 
 Com este código teremos o seguinte na tela:
 
@@ -72,7 +72,7 @@ Os métodos ``init(), preload(), create()``, e ``update()`` não são obrigatór
 
 Para o nosso 'Olá mundo!' podemos escrever o seguinte código:
 
-````javascript
+```javascript
 var config = {
   type: Phaser.AUTO,
   scene: {
@@ -83,7 +83,7 @@ var game = new Phaser.Game(config)
 function create() {
   this.add.text(400, 300, 'Olá, mundo!')
 }
-````
+```
 Teremos na tela:
 
 ![fig 4](resources/img/fig004.png)

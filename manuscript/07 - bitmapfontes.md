@@ -20,18 +20,18 @@ O this representa a scene em que estamos instanciando o objeto. Vamos ao exemplo
 
 Crie a seguinte estrutura de pasta/arquivo:
 
-````
+```
 + BitmapText
    font.png
    font.fnt
    index.html
    game.js
-````
+```
 Você vai encontrar estes arquivos no código fonte que está no Guithub ``http://github.com/gidenilson/teste``
 
 No arquivo index.html insira o seguinte código:
 
-````html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +44,11 @@ No arquivo index.html insira o seguinte código:
 
 </body>
 </html>
-````
+```
 
 E no arquivo game.js:
 
-````javascript
+```javascript
 var config = {
   type: Phaser.AUTO,
   scene: {
@@ -65,7 +65,7 @@ function create() {
   this.counter = 0;
   this.texto = this.add.bitmapText(100, 100, 'fonte', 'Minha Fonte', 32)
 }
-````
+```
 Isto irá imprimir "Minha Fonte" na tela do jogo.
 
 Para alterar o texto do objeto bitmapText criado utilize o método ``this.texto.setText('Outro texto aqui')``

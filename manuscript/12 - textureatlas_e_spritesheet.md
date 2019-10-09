@@ -18,7 +18,7 @@ Nós podemos criar imagens estáticas ou animações utilizando tanto sprite she
 
 Por enquanto vamos ver um exemplo de imagem estática criada com sprite sheet e textura atlas.
 
-````javascript
+```javascript
 function preload ()
 {
   // sprite sheet
@@ -27,11 +27,11 @@ function preload ()
   // texture Atlas
   this.load.atlas('mainmenu', 'images/MainMenu.png', 'images/MainMenu.json')
 }
-````
+```
 
 Exemplos de utilização:
 
-````javascript
+```javascript
 function create()
 {
   // criando sprites
@@ -42,13 +42,13 @@ function create()
   this.add.image(200, 50, 'bot', 2)
   this.add.image(200, 400, 'mainmenu', 'btnStart')
 }
-````
+```
 
 A princípio não faz diferença se colocamos uma figura na tela com ``sprite`` ou com ``image``. Mas, como já dissemos antes, se queremos uma animação temos que usar os sprites. Então não utilize sprites para imagens estáticas por motivo de economia de recursos da máquina.
 
 Vamos agora criar uma scene com alguns objetos ``sprite`` e ``image``:
 
-````javascript
+```javascript
 var lslslsls
 
-````
+```
