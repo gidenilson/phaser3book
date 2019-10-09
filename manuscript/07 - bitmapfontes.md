@@ -1,4 +1,11 @@
 ## Bitmap fontes
+### Classe Phaser.GameObjects.BitmapText
+
+Um objeto BitmapText é uma instância dessa classe. Na documentação do Phaser você poderá ver todos os métodos e propriedades que podem ser usados para trabalhar com esse objeto.
+
+O objeto BitmapText funciona usando um arquivo de textura  e um arquivo XML ou JSON que mapeia os caracteres dentro da textura. Durante a renderização, cada letra do texto é renderizada na tela, espaçada proporcionalmente e alinhada para corresponder ao mapeamento da fonte.
+
+Os objetos BitmapText são menos flexíveis que os objetos de texto, pois possuem menos recursos, como sombras, preenchimentos e a capacidade de usar fontes da Web; no entanto, você troca essa flexibilidade pela velocidade de renderização. Você também pode criar BitmapTexts visualmente atraentes, processando a textura da fonte em um editor de imagens, aplicando preenchimentos e quaisquer outros efeitos necessários.
 
 Bitmap fonte é uma técnica que utiliza 2 arquivos para escrever os caracteres na tela: um arquivo de imagem e um arquivo de texto com o mapeamento dos caracteres dentro do respectivo arquivo de imagem. O arquivo texto pode estar nos formatos XML, JSON ou CSV. Geralmente para o formato XML, temos um arquivo com a extensão FNT.
 
@@ -25,9 +32,9 @@ Crie a seguinte estrutura de pasta/arquivo:
    font.png
    font.fnt
    index.html
-   game.js
+   game1.js
 ```
-Você vai encontrar estes arquivos no código fonte que está no Guithub ``http://github.com/gidenilson/teste``
+Você vai encontrar estes arquivos no código fonte do curso.
 
 No arquivo index.html insira o seguinte código:
 
@@ -40,13 +47,13 @@ No arquivo index.html insira o seguinte código:
 </head>
 <body>
 <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
-<script src="game.js"></script>
+<script src="game1.js"></script>
 
 </body>
 </html>
 ```
 
-E no arquivo game.js:
+E no arquivo game1.js:
 
 ```javascript
 var config = {

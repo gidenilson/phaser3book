@@ -48,7 +48,51 @@ A princípio não faz diferença se colocamos uma figura na tela com ``sprite`` 
 
 Vamos agora criar uma scene com alguns objetos ``sprite`` e ``image``:
 
-```javascript
-var lslslsls
-
+``index.html``
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Phaser3</title>
+  </head>
+  <body>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+    <script src="game1.js"></script>
+  </body>
+</html>
 ```
+``game1.js``
+```javascript
+var config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create
+    }
+}
+var game = new Phaser.Game(config);
+
+function preload ()
+{
+  // sprite sheet
+  this.load.spritesheet('sheet', 'spritesheet.png', { frameWidth: 54, frameHeight: 59 })
+
+  // texture Atlas
+  this.load.atlas('atlas', 'atlas.png', 'atlas.json')
+}
+
+function create ()
+{
+    // criando sprites
+  this.add.sprite(50, 100, 'sheet', 2)
+  this.add.sprite(300, 150, 'atlas', 'btnJogarOut')
+
+  // criando imagens
+  this.add.image(50, 150, 'sheet', 10)
+  this.add.image(300, 300, 'atlas', 'parabens')
+}
+```
+Dê uma olhada no conteúdo dos arquivos, ``atlas.png``, ``atlas.json`` e ``spritesheet.png``, e observe como são e as diferenças entre eles. No decorrer do curso vamos ver bastante esse assunto.

@@ -31,11 +31,11 @@ Para experimentar as formas de trabalhar com texto no Phaser utilizaremos uma pe
   </head>
   <body>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
-    <script src="game.js"></script>
+    <script src="game1.js"></script>
   </body>
 </html>
 ```
-``game.js``
+``game1.js``
 ```javascript
 var config = {
   type: Phaser.AUTO,

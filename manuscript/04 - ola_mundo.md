@@ -3,7 +3,7 @@
 Vamos agora criar o nosso 'olá mundo'?
 
 1. Crie uma pasta para o nosso 'olá mundo'.
-2. Crie os arquivos index.html e game.js.
+2. Crie os arquivos index.html e game2.js.
 3. No arquivo index.html coloque o seguinte:
 
 ```html
@@ -21,7 +21,7 @@ Vamos agora criar o nosso 'olá mundo'?
 </html>
 ```
 
-4. Agora no arquivo game.js:
+4. Agora no arquivo game1.js:
 
 ```javascript
 var config = {

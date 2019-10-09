@@ -42,6 +42,21 @@ Esses 3 métodos são executados uma vez na chamada da scene. Mas o próximo mé
 ## Código mínimo
 Como já dissemos anteriormente, um jogo em Phaser pode ser um único arquivo de código. Vamos então nesse momento ver como fica o código mínimo para um jogo nascer:
 
+``index.html``
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+  </head>
+  <body>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+    <script src="game1.js"></script>
+  </body>
+</html>
+```
+``game1.js``
 ```javascript
 var config = {
     type: Phaser.AUTO,
@@ -69,21 +84,3 @@ Ou seja, só uma quadro preto na tela. Mas se abrirmos o console do desenvolvedo
 No código acima podemos observar que só temos um objeto de configuração e apenas o método ``create()``. A referência a uma scene está neste arquivo de configuração, mas não temos nenhum outro código designando uma scene. Isso acontece porque com um código mínimo podemos ter apenas uma scene, que será o próprio código.
 
 Os métodos ``init(), preload(), create()``, e ``update()`` não são obrigatórios, mas aparecem só quando necessário.
-
-Para o nosso 'Olá mundo!' podemos escrever o seguinte código:
-
-```javascript
-var config = {
-  type: Phaser.AUTO,
-  scene: {
-    create: create
-  }
-}
-var game = new Phaser.Game(config)
-function create() {
-  this.add.text(400, 300, 'Olá, mundo!')
-}
-```
-Teremos na tela:
-
-![fig 4](resources/img/fig004.png)
