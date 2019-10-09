@@ -109,6 +109,8 @@ var fonts = [
 ```
 Agora dê um refresh (CTRL F5) no browser e clique com o mouse no texto.
 Não esqueça de alterar o nome o script no arquivo html.
-```<script src="game2.js"></script>```
+```
+<script src="game2.js"></script>
+```
 
 Isto é só um exemplo para você começar a perceber o que pode ser feito com o Phaser. Se este código não está claro agora para você, não se preocupe; vamos ver o que significa tudo isso no decorrer do curso.
