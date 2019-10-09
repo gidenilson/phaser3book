@@ -96,3 +96,16 @@ function create ()
 }
 ```
 Dê uma olhada no conteúdo dos arquivos, ``atlas.png``, ``atlas.json`` e ``spritesheet.png``, e observe como são e as diferenças entre eles. No decorrer do curso vamos ver bastante esse assunto.
+
+## Free Texture Packer
+
+O Free Texture Packer é um software open source que tem uma interface gráfica muito simples e intuitiva. Com ele você poderá gerar facilmente seus texture atlas.
+
+Ao abrir o programa temos do lado esquerdo uma área para onde podemos arrastar as figuras ou adicionar uma pasta inteira.
+No centro fica o preview da textura, e do lado direito uma seção de configuração com valores padrão que não precisam nem de ajustes.
+
+![fig 22](resources/img/fig022.png)
+Talvez a única configuração que você vai querer fazer é definir a largura máxima do  arquivo PNG que será gerado. Isso pode ser feito na caixa ``Width`` que fica bem na metade da seção de configuração. Neste exemplo estou deixando o tamanho máximo de 512 pixels de largura. Outra configuração comumente ajustada é a opção de recortar as imagens, tirando as sobras, e a opção de permitir que o programa rotacione as imagens individualmente para economizar espaço.
+
+No mais, é só você dar uma mexidinha no programa para aprender rapidamente a utilizá-lo.
+Você pode baixá-lo em http://free-tex-packer.com
