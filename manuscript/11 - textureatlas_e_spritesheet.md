@@ -22,7 +22,8 @@ Por enquanto vamos ver um exemplo de imagem estática criada com sprite sheet e 
 function preload ()
 {
   // sprite sheet
-  this.load.spritesheet('bot', 'images/robot.png', { frameWidth: 32, frameHeight: 38 })
+  this.load.spritesheet('bot', 'images/robot.png', {
+    frameWidth: 32, frameHeight: 38 })
 
   // texture Atlas
   this.load.atlas('mainmenu', 'images/MainMenu.png', 'images/MainMenu.json')
@@ -78,7 +79,8 @@ var game = new Phaser.Game(config);
 function preload ()
 {
   // sprite sheet
-  this.load.spritesheet('sheet', 'spritesheet.png', { frameWidth: 54, frameHeight: 59 })
+  this.load.spritesheet('sheet', 'spritesheet.png', {
+    frameWidth: 54, frameHeight: 59 })
 
   // texture Atlas
   this.load.atlas('atlas', 'atlas.png', 'atlas.json')

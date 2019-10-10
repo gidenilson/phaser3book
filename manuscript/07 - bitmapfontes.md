@@ -1,4 +1,5 @@
 ## Bitmap fontes
+
 ### Classe Phaser.GameObjects.BitmapText
 
 Um objeto BitmapText é uma instância dessa classe. Na documentação do Phaser você poderá ver todos os métodos e propriedades que podem ser usados para trabalhar com esse objeto.

@@ -3,7 +3,7 @@
 Vamos agora criar o nosso 'olá mundo'?
 
 1. Crie uma pasta para o nosso 'olá mundo'.
-2. Crie os arquivos index.html e game2.js.
+2. Crie os arquivos index.html e game1.js.
 3. No arquivo index.html coloque o seguinte:
 
 ```html
@@ -16,7 +16,7 @@ Vamos agora criar o nosso 'olá mundo'?
     </head>
   <body>
       <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
-      <script src="game.js"></script>
+      <script src="game1.js"></script>
   </body>
 </html>
 ```

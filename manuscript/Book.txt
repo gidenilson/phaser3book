@@ -1,3 +1,4 @@
+00 - sobre.md
 01 - introducao.md
 02 - fundamentos.md
 03 - ambiente_de_desenvolvimento.md
