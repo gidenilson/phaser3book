@@ -9,6 +9,7 @@ Assim como muitos objetos do Phaser, as animações criadas são identificadas p
 ## Animação com spritesheet
 
 Para criar um sprite animado, usando um spritesheet, temos os seguintes passos:
+
 1. carregar o spritesheet.
 2. criar um sprite com uma imagem (textura) qualquer.
 3. criar um array com os frames de animação com o método ``generateFramesNumbers``.
@@ -114,4 +115,4 @@ function create() {
 
   Em seguida temos o textureAtlas utilizado nestes exemplos:
 
-  ![fig 25](resources/img/fig025.png)
+  
