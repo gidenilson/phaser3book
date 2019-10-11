@@ -10,3 +10,5 @@
 09 - bitmap_font_generator.md
 10 - imagens_e_sprites.md
 11 - textureatlas_e_spritesheet.md
+12 - animacoes.md
+13 - sons.md
