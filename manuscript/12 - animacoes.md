@@ -75,7 +75,7 @@ No código fonte você pode explorar estes exemplos.
 
 ## Animação com TextureAtlas
 
-O que vai mudar aqui é o tipo de recurso carregado e a substituição do método ``generateFramesNumbers`` por ``generateFramesNames``
+O que vai mudar aqui é o tipo de recurso carregado e a substituição do método ``generateFramesNumbers`` por ``generateFramesNames``.
 
 Os passos para animar um sprite usando textureAtlas são:
 
