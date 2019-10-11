@@ -114,4 +114,4 @@ function create() {
 
   Em seguida temos o textureAtlas utilizado nestes exemplos:
 
-  ![fig 25](resources/img/fig025.png)
+  ![fig 25](resources/img/fig024.png)
