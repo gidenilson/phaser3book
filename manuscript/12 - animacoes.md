@@ -118,7 +118,6 @@ O textureAtlas é indicado para animações mais complexas enquanto que para ani
 Em seguida temos o textureAtlas utilizado nestes exemplos.
 
 ![fig 25](resources/img/fig025.png)
-![fig 24](resources/img/fig024.png)
 
 E aqui temos uma pequena parte do arquivo JSON.
 

@@ -19,7 +19,7 @@ O método ``this.sound.add`` retorna uma instância de ``Phaser.Sound.BaseSound`
 | ------ | --------- |
 | play() | Toca o som |
 | pause() | Pausa o som |
-| stop() | Para o som
+| stop() | Para o som |
 | resume() | Toca a partir no momento da pausa |
 | destroy | Destroi o som e remove do SoundManager |
 | pauseAll() | Pausa todos os sons do game |
