@@ -81,7 +81,7 @@ Os passos para animar um sprite usando textureAtlas são:
 
 1. carregar o textureAtlas (a imagem e o json).
 2. criar um sprite com uma textura qualquer.
-3. criar a nimação fazendo uso do método ``generateFrameNames``.
+3. criar a animação fazendo uso do método ``generateFrameNames``.
 4. adicionar a animação do sprite criado.
 
 Vamos ao exemplo:
