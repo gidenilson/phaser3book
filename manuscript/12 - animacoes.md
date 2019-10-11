@@ -8,7 +8,7 @@ Assim como muitos objetos do Phaser, as animações criadas são identificadas p
 
 ## Animação com spritesheet
 
-Para criar um sprite animado, usando um spritesheet, temos os seguintes passos:
+Para criar um sprite animado, usando um spritesheet, temos os seguintes passos.
 
 1. carregar o spritesheet.
 2. criar um sprite com uma imagem (textura) qualquer.
@@ -113,6 +113,36 @@ function create() {
 
   O textureAtlas é indicado para animações mais complexas enquanto que para animações simples podemos usar facilmente um spritesheet.
 
-  Em seguida temos o textureAtlas utilizado nestes exemplos:
+  Em seguida temos o textureAtlas utilizado nestes exemplos.
 
-  
+  ![fig 25](resources/img/fig025.png)
+
+  E aqui temos uma pequena parte do arquivo JSON.
+  ```json
+  {"frames": [
+
+{
+	"filename": "blueJellyfish0000",
+	"frame": {"x":484,"y":770,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":66},
+	"sourceSize": {"w":66,"h":66}
+}
+,{
+	"filename": "blueJellyfish0001",
+	"frame": {"x":484,"y":836,"w":63,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":66,"h":66},
+	"sourceSize": {"w":66,"h":66}
+}
+,{
+	"filename": "blueJellyfish0002",
+	"frame": {"x":322,"y":1621,"w":62,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":66,"h":66},
+	"sourceSize": {"w":66,"h":66}
+}
+```
