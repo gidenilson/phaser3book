@@ -49,4 +49,4 @@ function create() {
 ```
 (lembre-se de que para o som começar a tocar no Chrome você precisa clicar na tela do browser)
 
-No site [opengameart.org](https://opengameart.org) você encontrará muitas trilhas e efeitos sonoros livres para uso.
+No site <https://opengameart.org> você encontrará muitas trilhas e efeitos sonoros livres para uso.

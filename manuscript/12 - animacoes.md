@@ -86,6 +86,7 @@ Os passos para animar um sprite usando textureAtlas são:
 4. adicionar a animação do sprite criado.
 
 Vamos ao exemplo:
+
 ```javascript
 function preload ()
 {
@@ -108,17 +109,19 @@ function create() {
   this.ray.play('stingray')
 }
   ```
-  No textureAtlas o peixe stingray usa frames com o nome stingray0000 até stingray0023.
-  O parâmetro zeropad é a quantidade de zero máximo que aparece na numeração dos nomes.
 
-  O textureAtlas é indicado para animações mais complexas enquanto que para animações simples podemos usar facilmente um spritesheet.
+No textureAtlas o peixe stingray usa frames com o nome stingray0000 até stingray0023.
+O parâmetro zeropad é a quantidade de zero máximo que aparece na numeração dos nomes.
 
-  Em seguida temos o textureAtlas utilizado nestes exemplos.
+O textureAtlas é indicado para animações mais complexas enquanto que para animações simples podemos usar facilmente um spritesheet.
 
+Em seguida temos o textureAtlas utilizado nestes exemplos.
 
-  ![fig 25](resources/img/fig025.png)
+![fig 25](resources/img/fig025.png)
+![fig 24](resources/img/fig024.png)
 
-  E aqui temos uma pequena parte do arquivo JSON.
+E aqui temos uma pequena parte do arquivo JSON.
+
   ```json
   {"frames": [
 
