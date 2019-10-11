@@ -115,6 +115,7 @@ function create() {
 
   Em seguida temos o textureAtlas utilizado nestes exemplos.
 
+
   ![fig 25](resources/img/fig025.png)
 
   E aqui temos uma pequena parte do arquivo JSON.
