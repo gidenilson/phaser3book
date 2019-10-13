@@ -36,7 +36,7 @@ Agora coloque o seguinte código dentro do index.html:
   <div style="font-family:BigShoulders; position:absolute;
   left:-1000px; visibility:hidden;">.</div>
 
-<script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/phaser@3.20.0/dist/phaser.js"></script>
 <script src="game1.js"></script>
 
 </body>

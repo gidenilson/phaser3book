@@ -30,7 +30,7 @@ Para experimentar as formas de trabalhar com texto no Phaser utilizaremos uma pe
     <title>Text</title>
   </head>
   <body>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.20.0/dist/phaser.js"></script>
     <script src="game1.js"></script>
   </body>
 </html>

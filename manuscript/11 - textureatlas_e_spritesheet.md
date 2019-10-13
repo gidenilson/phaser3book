@@ -58,7 +58,7 @@ Vamos agora criar uma scene com alguns objetos ``sprite`` e ``image``:
     <title>Phaser3</title>
   </head>
   <body>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.20.0/dist/phaser.js"></script>
     <script src="game1.js"></script>
   </body>
 </html>

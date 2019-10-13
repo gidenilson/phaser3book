@@ -51,7 +51,7 @@ Como já dissemos anteriormente, um jogo em Phaser pode ser um único arquivo de
     <title>Text</title>
   </head>
   <body>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.20.0/dist/phaser.js"></script>
     <script src="game1.js"></script>
   </body>
 </html>
