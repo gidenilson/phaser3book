@@ -203,4 +203,59 @@ function update() {
 ```
 Rode este código e em seguida clique e arraste o mouse pela tela.
 
+Primeiro atribuimos a ``this.pointer`` a instância da classe ``Phaser.Input.Pointer``. Este objeto encapsula tanto o mouse como o touch.  
+
 Você terá a posição inicial do clique, a distância entre o ponto de arraste e a posição inicial, e também o ângulo em radianos. Este exemplo funciona tanto para o mouse como para o touch. Interessante, não?
+
+O Phaser suporta até 10 pontos multitouch. Para os jogos que vamos fazer neste curso só utilizaremos 1 ponto. Nos exemplos do site você vai poder ver como habilitar isso.
+
+Também é possível fazer com que os objetos (sprites, imagens e etc.) fiquem sensíveis a eventos do mouse. Ou seja, os objetos do jogo podem receber eventos de mouseOver, mouseDonw, mouseUp, mouseOut e etc.
+
+Vamos criar um exemplo onde colocaremos uma imagem na tela e escutaremos os eventos do mouse nessa imagem:
+
+```javascript
+var config = {
+  scene: {
+    preload: preload,
+    create: create
+  }
+}
+var game = new Phaser.Game(config)
+
+function preload() {
+  this.load.image('rato', 'mouse.png')
+}
+
+function create() {
+  this.rato = this.add.image(400, 300, 'rato')
+  this.rato.setInteractive()
+  this.rato.on('pointerover', () => this.rato.setTint(0xff0000))
+  this.rato.on('pointerdown', () => this.rato.setTint(0x00ff00))
+  this.rato.on('pointerup', () => this.rato.setTint(0x0000ff))
+  this.rato.on('pointerout', () => this.rato.clearTint())
+}
+```
+Para tornar um objeto interativo com o mouse devemos executar o método ``setInteractive(true)`` e para desabilitar a interatividade ``setInteractive(false)``. O valor padrão do método é ``true``.
+
+Também podemos capturar eventos da "rodinha" do mouse...
+
+```javascript
+var config = {
+  scene: {
+    create: create
+  }
+}
+var game = new Phaser.Game(config)
+function create() {
+  this.y = 0
+  this.texto = this.add.text(10, 10, '0', {
+    font: '28px Courier',
+    fill: '#00ff00'
+  })
+  this.input.on('wheel', (pointer, gameObjects, deltaX, deltaY, deltaZ) => {
+    this.texto.setText(this.y += deltaY / 100)
+  })
+}
+```
+
+Nos exemplo do site você encontrará muitas outras possibilidades.
