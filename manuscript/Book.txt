@@ -17,3 +17,4 @@
 16 - botoes.md
 17 - tween_e_timeline.md
 18 - path_e_follower.md
+19 - configuracao.md
