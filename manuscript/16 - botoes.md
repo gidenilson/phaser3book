@@ -27,7 +27,7 @@ Com esse atributo com o uso de ``type="module"`` poderemos trabalhar diretamente
 
 Vamos agora ver como fica a classe do nosso componente "ImageButton":
 
-BtnButton.js
+ImageButton.js
 ```javascript
 class ImageButton extends Phaser.GameObjects.Image {
   constructor(scene, x, y, texture) {

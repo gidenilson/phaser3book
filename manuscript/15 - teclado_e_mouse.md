@@ -257,5 +257,4 @@ function create() {
   })
 }
 ```
-
 Nos exemplo do site você encontrará muitas outras possibilidades.
