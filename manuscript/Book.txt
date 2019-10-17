@@ -15,3 +15,5 @@
 14 - particulas.md
 15 - teclado_e_mouse.md
 16 - botoes.md
+17 - tween_e_timeline.md
+18 - path_e_follower.md
