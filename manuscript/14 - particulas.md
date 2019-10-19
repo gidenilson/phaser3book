@@ -42,7 +42,8 @@ O resultado será o seguinte:
 ![fig 26](resources/img/fig026.png)
 
 O método ``this.particles.createEmitter`` retorna uma instância de
- ``Phaser.GameObjects.Particles.ParticleEmitterManager`` que possui muitos métodos de configuração para a emissão das partículas. No decorrer no curso vamos trabalhar com alguns desses métodos. Pesquise na documentação do Phaser por ``Phaser.GameObjects.Particles.ParticleEmitterManager`` para ter acesso à lista completa de métodos de configuração.
+ ``Phaser.GameObjects.Particles.ParticleEmitterManager`` que possui muitos métodos de configuração para a emissão das partículas. No decorrer no curso vamos trabalhar com alguns desses métodos. Pesquise na documentação do Phaser por
+  ``Phaser.GameObjects.Particles.ParticleEmitterManager`` para ter acesso à lista completa de métodos de configuração.
 
 Vamos ver alguns desses métodos?
 
@@ -56,7 +57,7 @@ Coloca o emissor no modo de explosão (frequency = -1), interrompendo qualquer f
 #### `flow(frequency [, count])`
 Coloca o emissor no modo de fluxo (frequency >= 0) e inicia (ou reinicia) um fluxo de partículas.
 
-#### `forEachAlive(callback, context)
+#### `forEachAlive(callback, context)`
 Chama uma função callback para cada partícula ativa neste emissor.
 
 #### `forEachDead(callback, context)`

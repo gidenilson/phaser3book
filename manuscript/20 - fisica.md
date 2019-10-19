@@ -128,4 +128,114 @@ Nas próximas linhas fazemos o mesmo para a velocidade no eixo Y.
 
 ## Detecção de colisões
 
-O sistema Arcade tem a funcionalidade de detecção de colisões entre objetos, entre objetos e o mundo, entre objetos e grupos, e entre grupos. Vamos primeiro ver como trabalhar com colisão de objetos com o mundo físico.
+### Colisão entre objeto e mundo
+
+O sistema Arcade tem a funcionalidade de detecção de colisões entre objetos e mundo, entre objetos e objetos, entre objetos e grupos, e entre grupos. Vamos primeiro ver como trabalhar com colisão de objetos com o mundo físico.
+
+Para um objeto colidir com o mundo precisamos chamar o método ``setCollideWorldBounds(true)``. O valor padrão para esse método é true, mas para desabilitar a colisão com o mundo, utilize ``false``.
+
+Vamos então adicionar essa linha no método ``create()``:
+
+```javascript
+function create() {
+  this.bola = this.physics.add.image(100, 100, 'ball')
+  // habilita colisão da bola com o mundo
+  this.bola.setCollideWorldBounds()
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+```
+
+Muito bem. Agora a bola não ultrapassa os limites do mundo.
+
+Vamos acrescentar mais 2 linhas para capturarmos o evento da bola tocar nas bordas do mundo?
+
+```javascript
+function create() {
+  this.bola = this.physics.add.image(100, 100, 'ball')
+  // habilita colisão da bola com o mundo
+  this.bola.setCollideWorldBounds()
+  // habilita o disparo do evento de colisão da bola com o mundo
+  this.bola.body.onWorldBounds = true
+  // checa se houve colisão de algum objeto com o mundo
+  this.physics.world.on('worldbounds', (body) => console.log(body))
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+```
+
+### Colisão entre objetos
+
+Agora vamos criar outra bola no método ``create()`` e fazer com que colidam.
+
+```javascript
+function create() {
+  this.bola = this.physics.add.image(100, 100, 'ball')
+  this.bola2 = this.physics.add.image(200, 200, 'ball')
+  // habilita colisão da bola com o mundo
+  this.bola.setCollideWorldBounds()
+  this.bola2.setCollideWorldBounds()
+  // habilita o disparo do evento de colisão da cola com o mundo
+  this.bola.body.onWorldBounds = true
+  this.bola2.body.onWorldBounds = true
+  // define que a bola2 vai `recochetear`
+  this.bola2.body.setBounce(1, 1)
+  // habilita colisão entre as bolas e checa quando colidem
+  this.physics.add.collider(this.bola, this.bola2, (a, b) => console.log(`${a} colide com ${b}`))
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+```
+
+A próxima tarefa é criar um grupo de imagens e fazer com que colida com a bola.
+
+A seguir temos o método ``create()`` atualizado com essa tarefa:
+
+```javascript
+function create() {
+  // cria bola
+  this.bola = this.physics.add.image(100, 100, 'ball')
+  // habilita colisão da bola com o mundo
+  this.bola.setCollideWorldBounds()
+  // cria grupo de física passando um objeto de configuração.
+  this.group = this.physics.add.group({
+    bounceX: 1,
+    bounceY: 1,
+    collideWorldBounds: true
+  })
+  // cria 6 caixas e adiciona ao grupo de física.
+  for (let i = 1; i < 7; i++) {
+    let block = this.add.image(i * 150, 250, 'block')
+    this.group.add(block)
+  }
+  // habilita colisão entre a bola e o grupo.
+  this.physics.add.collider(this.bola, this.group, (a, b) => console.log(`${a} colisão com ${b}`))
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+```
+
+Um código comentado vale mais do que mil palavras.
+
+Se você prestar atenção, vai perceber que a bola colide com as caixas mas as caixas não colidem entre si.
+Para habilitar a colisão entre as caixas precisamos habilitar a colisão do grupo com ele mesmo:
+
+```javascript
+function create() {
+  // cria bola
+  this.bola = this.physics.add.image(100, 100, 'ball')
+  // habilita colisão da bola com o mundo
+  this.bola.setCollideWorldBounds()
+  // cria grupo de física passando um objeto de configuração.
+  this.group = this.physics.add.group({
+    bounceX: 1,
+    bounceY: 1,
+    collideWorldBounds: true
+  })
+  // cria 6 caixas e adiciona ao grupo de física.
+  for (let i = 1; i < 7; i++) {
+    let block = this.add.image(i * 150, 250, 'block')
+    this.group.add(block)
+  }
+  // habilita colisão entre a bola e o grupo.
+  this.physics.add.collider(this.bola, this.group, (a, b) => console.log(`${a} colisão com ${b}`))
+  this.physics.add.collider(this.group, this.group, (a, b) => console.log(`${a} colisão com ${b}`))
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+```
