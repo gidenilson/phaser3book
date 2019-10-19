@@ -41,7 +41,8 @@ O resultado será o seguinte:
 
 ![fig 26](resources/img/fig026.png)
 
-O método ``this.particles.createEmitter`` retorna uma instância de ``Phaser.GameObjects.Particles.ParticleEmitterManager`` que possui muitos métodos de configuração para a emissão das partículas. No decorrer no curso vamos trabalhar com alguns desses métodos. Pesquise na documentação do Phaser por ``Phaser.GameObjects.Particles.ParticleEmitterManager`` para ter acesso à lista completa de métodos de configuração.
+O método ``this.particles.createEmitter`` retorna uma instância de
+ ``Phaser.GameObjects.Particles.ParticleEmitterManager`` que possui muitos métodos de configuração para a emissão das partículas. No decorrer no curso vamos trabalhar com alguns desses métodos. Pesquise na documentação do Phaser por ``Phaser.GameObjects.Particles.ParticleEmitterManager`` para ter acesso à lista completa de métodos de configuração.
 
 Vamos ver alguns desses métodos?
 
@@ -49,49 +50,49 @@ Vamos ver alguns desses métodos?
 Emite Partículas em uma dada posição, ou na posição atual do emitter.
 ``x`` e ``y`` definem a posição na tela, enquanto que ``count`` define a quantidade de partículas emitidas.
 
-#### explode(count, x, y)
+#### `explode(count, x, y)`
 Coloca o emissor no modo de explosão (frequency = -1), interrompendo qualquer fluxo de partículas atual e emitindo todas as partículas (count) de uma vez.
 
-#### flow(frequency \[, count\])
+#### `flow(frequency [, count])`
 Coloca o emissor no modo de fluxo (frequency >= 0) e inicia (ou reinicia) um fluxo de partículas.
 
-#### forEachAlive(callback, context)
+#### `forEachAlive(callback, context)
 Chama uma função callback para cada partícula ativa neste emissor.
 
-#### forEachDead(callback, context)
+#### `forEachDead(callback, context)`
 Chama uma função callback para cada partícula inativa neste emissor.
 
-#### getAliveParticleCount()
+#### `getAliveParticleCount()`
 Retorna o número de partículas ativas (em uso) do emissor.
 
-#### getDeadParticleCount()
+#### `getDeadParticleCount()`
 Retorna o número de partículas inativas (disponíveis) do emissor.
 
-#### getParticleCount()
+#### `getParticleCount()`
 Retorna o número total de partículas do emissor.
 
-#### killAll()
+#### `killAll()`
 Desativa todas as partículas do emissor.
 
-#### onParticleDeath(callback \[, context\])
+#### `onParticleDeath(callback [, context])`
 Define uma função callback a ser chamada para cada partícula 'morta'.
 
-#### onParticleEmit(callback \[, context\])
+#### `onParticleEmit(callback [, context])`
 Define uma função callback para cada nova partícula emitida.
 
-#### setAngle( \[degrees\])
+#### `setAngle( [degrees])`
 Define o ângulo da direção da emissão.
 
-#### pause()
+#### `pause()`
 Pausa a emissão.
 
-#### resume()
+#### `resume()`
 Volta a emitir.
 
-#### stop()
+#### `stop()`
 Para a emissão.
 
-#### start()
+#### `start()`
 Se o emissor estiver em modo de fluxo (frequency >= 0), o fluxo de partículas ira iniciar. E se estiver em modo de explosão, nada acontecerá.
 
 Vamos fazer um outro exemplo mais complexo, utilizando um objeto de configuração para o emissor de partículas.
