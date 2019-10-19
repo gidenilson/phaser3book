@@ -45,7 +45,7 @@ O método ``this.particles.createEmitter`` retorna uma instância de ``Phaser.Ga
 
 Vamos ver alguns desses métodos?
 
-#### ``emitParticle( [count] [, x] [, y])``
+#### `emitParticle( [count] [, x] [, y])`
 Emite Partículas em uma dada posição, ou na posição atual do emitter.
 ``x`` e ``y`` definem a posição na tela, enquanto que ``count`` define a quantidade de partículas emitidas.
 
