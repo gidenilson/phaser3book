@@ -89,6 +89,7 @@ var config = {
 var game = new Phaser.Game(config)
 function preload() {
   this.load.image('ball', 'ball.png')
+  this.load.image('block', 'block.png')
 }
 function create() {
   this.bola = this.physics.add.image(100, 100, 'ball')
