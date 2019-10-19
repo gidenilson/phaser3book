@@ -45,14 +45,14 @@ O método ``this.particles.createEmitter`` retorna uma instância de ``Phaser.Ga
 
 Vamos ver alguns desses métodos?
 
-#### emitParticle( [count] [, x] [, y])
+#### emitParticle( \[count\] \[, x\] \[, y\])
 Emite Partículas em uma dada posição, ou na posição atual do emitter.
 ``x`` e ``y`` definem a posição na tela, enquanto que ``count`` define a quantidade de partículas emitidas.
 
 #### explode(count, x, y)
 Coloca o emissor no modo de explosão (frequency = -1), interrompendo qualquer fluxo de partículas atual e emitindo todas as partículas (count) de uma vez.
 
-#### flow(frequency [, count])
+#### flow(frequency \[, count\])
 Coloca o emissor no modo de fluxo (frequency >= 0) e inicia (ou reinicia) um fluxo de partículas.
 
 #### forEachAlive(callback, context)
@@ -73,13 +73,13 @@ Retorna o número total de partículas do emissor.
 #### killAll()
 Desativa todas as partículas do emissor.
 
-#### onParticleDeath(callback [, context])
+#### onParticleDeath(callback \[, context\])
 Define uma função callback a ser chamada para cada partícula 'morta'.
 
-#### onParticleEmit(callback [, context])
+#### onParticleEmit(callback \[, context\])
 Define uma função callback para cada nova partícula emitida.
 
-#### setAngle( [degrees])
+#### setAngle( \[degrees\])
 Define o ângulo da direção da emissão.
 
 #### pause()
