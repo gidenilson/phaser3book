@@ -1,6 +1,7 @@
 # Path e follower
 
-No Phaser podemos fazer com que sprites percorram um caminho pré-traçado. Isso é feito criando-se o caminho ``path`` e um sprite especial que é uma instância da classe ``Phaser.GameObjects.PathFollower``. Um ``PathFollower`` é um sprite que possui funcionalidades adicionais para atuar como ``Follower`` (seguidor). Tudo que podemos fazer com um sprite comum podemos também aplicar a um sprite do tipo ``Follower``.
+No Phaser podemos fazer com que sprites percorram um caminho pré-traçado. Isso é feito criando-se o caminho ``path`` e um sprite especial que é uma instância da classe
+``Phaser.GameObjects.PathFollower``. Um ``PathFollower`` é um sprite que possui funcionalidades adicionais para atuar como ``Follower`` (seguidor). Tudo que podemos fazer com um sprite comum podemos também aplicar a um sprite do tipo ``Follower``.
 
 A forma mais comum de instanciar a um PathFollower é usando o método ``this.add.follower(path, x, y, texture [, frame])``, onde ``this`` referencia a scene em que estamos trabalhando.
 
