@@ -212,8 +212,6 @@ function create() {
 }
 ```
 
-Um código comentado vale mais do que mil palavras.
-
 Se você prestar atenção, vai perceber que a bola colide com as caixas mas as caixas não colidem entre si.
 Para habilitar a colisão entre as caixas precisamos habilitar a colisão do grupo com ele mesmo:
 

@@ -1,10 +1,10 @@
 # Introdução
 
-O Phaser é uma engine de jogos em HTML5 de código aberto rápida, gratuita e divertida, que oferece renderização WebGL e Canvas em navegadores da Web para desktop e dispositivos móveis.
+O Phaser é um framework Javascript para a criação de jogos em HTML5, de código aberto rápido, gratuito e divertido, que oferece renderização WebGL e Canvas em navegadores da Web para desktop e dispositivos móveis.
 
 Os jogos podem ser compilados para iOS, Android e aplicativos nativos usando ferramentas de terceiros. Você pode usar JavaScript ou TypeScript para desenvolvimento.
 
-Juntamente com a fantástica comunidade de código aberto, o Phaser é ativamente desenvolvido e mantido pela Photon Storm. Como resultado do suporte rápido e de uma API amigável para desenvolvedores, o Phaser é atualmente uma das engines de jogos mais marcadas no GitHub. Milhares de desenvolvedores de agências digitais independentes e multinacionais e universidades de todo o mundo usam o Phaser.
+Juntamente com a fantástica comunidade de código aberto, o Phaser é ativamente desenvolvido e mantido pela Photon Storm. Como resultado do suporte rápido e de uma API amigável para desenvolvedores, o Phaser é atualmente um dos frameworks de jogos mais marcadas no GitHub. Milhares de desenvolvedores de agências digitais independentes e multinacionais e universidades de todo o mundo usam o Phaser.
 
 ## Features
 
