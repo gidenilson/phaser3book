@@ -35,7 +35,7 @@ O resultado será um tilemap como a figura a seguir. Você não precisa fazer ex
 ![fig 33](resources/img/fig033.png)
 
 Temos aqui um passo a passo para a criação do tilemap, mas você pode também acessar esse mesmo tutorial em vídeo no Youtube em
-<https://youtu.be/Pm9KSdwcwvE>.
+<https://youtu.be/yh-7Xrnlf2k>.
 
 ### Passo a Passo
 
@@ -47,7 +47,7 @@ Configurar tamanho do mapa com 16 x 12 tiles.
 
  ![fig 35](resources/img/fig035.png)
 
- 3. Salvar como ``autodromo.tmx``.
+ Salvar como ``autodromo.tmx``.
 
  ![fig 36](resources/img/fig036.png)
 
@@ -55,11 +55,15 @@ Clicar no botão "Novo Tileset..." e abrir a imagem ``tiles-rua-02.png`` (esta i
 
 ![fig 37](resources/img/fig037.png)
 
-Configurar tileset: Largura e altura = 100px, Margem e Espaçamento = 0px.
+No primeiro parâmetro `Nome:` devemos colocar um nome pelo qual o tileset vai ser identificado no Phaser. No nosso caso vamos deixar como `tiles-rua-02`` mesmo.
+
+Em seguida configurar o tileset: Largura e altura = 100px, Margem e Espaçamento = 0px.
 
 ![fig 38](resources/img/fig038.png)
 
-Criar 3 camadas de tiles: pista, arbusto e terreno (nesta ordem).
+Criar 3 camadas (layers) de tiles: pista, arbusto e terreno (nesta ordem).
+
+[Obs. podemos nos referir a camadas com a nomeclatura na língua inglesa "layers"]
 
 ![fig 39](resources/img/fig039.png)
 
@@ -102,7 +106,7 @@ var config = {
 var game = new Phaser.Game(config)
 function preload() {
   // carrega o JSON
-  this.load.tilemapTiledJSON('map', 'tilemap.json')
+  this.load.tilemapTiledJSON('map', 'autodromo.json')
   // carrega o tileset
   this.load.image('tiles', 'tiles-rua-02.png')
 }
@@ -113,7 +117,7 @@ function create() {
   // mapa definido no Tiled.
   var tileset = map.addTilesetImage('tiles-rua-02', 'tiles')
   // cria o layer do terreno
-  var terreno = map.createStaticLayer(0, tileset, 0, 0)
+  var terreno = map.createStaticLayer('terreno', tileset, 0, 0)
   // cria o layer do arbusto
   var arbusto = map.createStaticLayer('arbusto', tileset, 0, 0)
   // cria o layer da pista
@@ -127,10 +131,43 @@ function create() {
 Na linha 12 carregamos o tilemap.json gerado pelo Tiled.
 Na linha 14 carregamos a imagem do tileset.
 Na linha 18 criamos o mapa.
-Na linha 21 criamos o tileset adicionando a imagem ao mapa.
+Na linha 21 criamos o tileset adicionando a imagem ao mapa. O primeiro parâmetro é o nome do mapa que foi definido no Tiled, e o segundo é o ``key`` da imagem que carregamos na linha 14.
 Nas linha 23 a 27 criamos os layers. Observe na ordem em que estão os layers. No Phaser nós podemos configura a profundidade de cada layer, mas nesse exemplo vamos deixá-los já nas devidas profundidades.
 Nas linha de 29 a 31 ajustamos a escala dos layers para caber na tela que definimos no objeto de configuração do game.
 
 ## Layer de objetos
 
-Podemos ter no tilemap um layer para marcar posição de objetos no mapa. No próximo exemplo iremos criar um layer de objetos no Tiled e exportar novamente o JSON. Então usaremos a camada de objetos do novo mapa para posicionar algums jóias no mundo.
+Podemos ter no tilemap um layer para marcar posição de objetos no mapa. No próximo exemplo iremos criar um layer de objetos no Tiled e exportar novamente o JSON. Então usaremos a camada de objetos do novo mapa para posicionar algumas joias no mundo. Você pode também assistir o vídeo sobre como criar layers de objetos em <https://youtube.com/xxxxxxxxx>
+
+Primeiro criamos uma camada de objetos:
+
+![fig 46](resources/img/fig046.png)
+
+Chamados essa camada de ``joia`` e a arrastamos para o topo das camadas, acima de ``pista``. Para o Phaser, não importa em que nível esteja a camada de objetos, mas para nossa visualização no Tiled, deixamos acima das outras.
+
+![fig 47](resources/img/fig047.png)
+
+Agora na barra de ferramentas selecionamos ``Insert Point``.
+
+![fig 48](resources/img/fig048.png)
+
+Selecionamos a camada de objetos na lista de camadas e já podemos marcar pontos onde ficarão os objetos.
+
+![fig 49](resources/img/fig049.png)
+
+Crie vários pontos de objetos sobre o terreno. Em cada ponto marcado iremos colocar um sprite de moeda no Phaser.
+
+Faça algo do tipo...
+
+![fig 50](resources/img/fig050.png)
+
+Agora exporte novamente o mapa JSON.
+
+### Colocando moedas nas posições de objetos do mapa
+
+
+## Tiles de colisão
+
+Num mapa de jogo sempre temos elementos de colisão, tais como paredes, chão, objetos e etc. Para fazer isso no Phaser usaremos uma técnica de marcar tiles de colisão no mapa.
+
+A ideia é criar uma propriedade booleana personalizada no tileset (por exemplo "colisao") e marcar alguns tiles específicos com o valor de ``colisão = true``. Feito isso podemos, dentro do Phaser, fazer com que objetos do jogo colidam com esses tiles marcados.

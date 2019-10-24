@@ -35,3 +35,10 @@ Você deverá ter a seguinte saída no console:
 ![fig 6](resources/img/fig006.png)
 
 Agora se você abrir o browser no endereço ``http://localhost:8080`` ainda não acontecerá nada. Mas se você criar nesta pasta um arquivo ``index.html`` e chamar ``http://localhost:8080/index.html`` você verá que o http-server está funcionando.
+
+Nos nossos exemplos o procedimento para testar o jogo será sempre este:
+1. Abrir o terminal GitBash na pasta onde está o arquivo index.HTML.
+2. Executar o comando ``http-server``.
+3. Abrir o browser em ``http://localhost:8080/index.html``
+
+Você encontra um pequeno vídeo tutorial em <https://yotube.com/xxxxxx>
