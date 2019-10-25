@@ -32,7 +32,7 @@ Isto instalará o http-server de forma global, para estar acessível de qualquer
 Para testar, digite no console o comando ``http-server``
 Você deverá ter a seguinte saída no console:
 
-![fig 6](resources/img/fig006.png)
+![fig 6a](resources/img/fig006a.png)
 
 Agora se você abrir o browser no endereço ``http://localhost:8080`` ainda não acontecerá nada. Mas se você criar nesta pasta um arquivo ``index.html`` e chamar ``http://localhost:8080/index.html`` você verá que o http-server está funcionando.
 

@@ -253,3 +253,37 @@ O resultado será algo como...
 Num mapa de jogo sempre temos elementos de colisão, tais como paredes, chão, objetos e etc. Para fazer isso no Phaser usaremos uma técnica de marcar tiles de colisão no mapa.
 
 A ideia é criar uma propriedade booleana personalizada no tileset (por exemplo "colisao") e marcar alguns tiles específicos com o valor de ``colisão = true``. Feito isso podemos, dentro do Phaser, fazer com que objetos do jogo colidam com esses tiles marcados.
+
+Vamos ao passo a passo:
+
+Clique no botão ``Editar Tileset``.
+
+![fig 52](resources/img/fig052.png)
+
+Selecione todos os tiles.
+
+![fig 53](resources/img/fig053.png)
+
+Clique no botão ``Adicionar propriedade``.
+
+![fig 54](resources/img/fig054.png)
+
+Crie uma propriedade chamada 'colisao', do tipo ``bool``.
+
+![fig 55](resources/img/fig055.png)
+
+Agora selecione só os tiles de grama e de terra. E marque a propriedade "colisão" como true no checkbox da propriedade.
+
+![fig 56](resources/img/fig056.png)
+
+Salve o arquivo.
+
+![fig 57](resources/img/fig057.png)
+
+ E novamente o ``autodromo.json``.
+
+![fig 58](resources/img/fig058.png)
+
+Agora já temos o nosso mapa com os tiles de colisão devidamente configurados.
+
+Para ver como utilizar os tiles de colisão, vamos criar um game básico com tudo que já aprendemos até aqui.

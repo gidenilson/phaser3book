@@ -38,3 +38,5 @@ function create() {
 5. Abra o GitBash na pasta do projeto e digite o comando ``http-server``
 6. Abra o browser e acesse ``http://localhost:8080/index.html``
 7. Pronto. Nosso olá mundo está funcionando.
+
+![fig 6b](resources/img/fig006b.png)
