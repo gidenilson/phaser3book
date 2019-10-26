@@ -255,6 +255,7 @@ Num mapa de jogo sempre temos elementos de colisão, tais como paredes, chão, o
 A ideia é criar uma propriedade booleana personalizada no tileset (por exemplo "colisao") e marcar alguns tiles específicos com o valor de ``colisão = true``. Feito isso podemos, dentro do Phaser, fazer com que objetos do jogo colidam com esses tiles marcados.
 
 Vamos ao passo a passo:
+[Um vídeo tutorial está disponível em <https://youtube.com/xxxxxxxxxx>]
 
 Clique no botão ``Editar Tileset``.
 
@@ -286,4 +287,97 @@ Salve o arquivo.
 
 Agora já temos o nosso mapa com os tiles de colisão devidamente configurados.
 
-Para ver como utilizar os tiles de colisão, vamos criar um game básico com tudo que já aprendemos até aqui.
+Para ver como utilizar os tiles de colisão, vamos criar um game bem simples. Que consistirá em um objeto controlado pelas setas do teclado caminhando pelo autódromo.
+
+``game3.js``
+
+```javascript
+var config = {
+  width: 800,
+  height: 600,
+  pixelArt: true,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      // desabilita debug da física
+      debug: false
+    }
+  },
+  scene: {
+    preload: preload,
+    create: create,
+    update: update
+  }
+}
+var game = new Phaser.Game(config)
+function preload() {
+  // carrega o JSON
+  this.load.tilemapTiledJSON('map', 'autodromo.json')
+  // carrega o tileset
+  this.load.image('tiles', 'tiles-rua-02.png')
+  // carrega o carro
+  this.load.image('carro', 'circle.png')
+}
+function create() {
+  // cria o tilemap
+  var map = this.make.tilemap({
+    key: 'map'
+  })
+  // cria o tileset onde o primeiro parâmetro é o nome do
+  // mapa definido no Tiled.
+  var tileset = map.addTilesetImage('tiles-rua-02', 'tiles')
+  // cria o layer do terreno
+  var terreno = map.createStaticLayer('terreno', tileset, 0, 0)
+  // cria o layer do arbusto
+  var arbusto = map.createStaticLayer('arbusto', tileset, 0, 0)
+  // cria o layer da pista
+  var pista = map.createStaticLayer('pista', tileset, 0, 0)
+  // cria o carro com imagem pois não precisamos de animação
+  this.carro = this.physics.add.image(150, 150, 'carro')
+  // habilita tiles de colisão do terreno
+  terreno.setCollisionByProperty({
+    colisao: true
+  })
+  // habilita colisão entre o carro e o terreno
+  this.physics.add.collider(this.carro, terreno)
+  //câmera segue o carro
+  this.camera = this.cameras.main
+  this.camera.startFollow(this.carro)
+  this.camera.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
+  // cria o cursos para detectar as setas do teclado
+  this.cursors = this.input.keyboard.createCursorKeys()
+}
+function update() {
+  // as próximas linhas definem a velocidade do carro
+  // com base nas setas pressionadas no teclado
+  this.carro.setVelocity(0)
+  if (this.cursors.left.isDown) {
+    this.carro.setVelocityX(-200)
+  } else if (this.cursors.right.isDown) {
+    this.carro.setVelocityX(200)
+  }
+  if (this.cursors.up.isDown) {
+    this.carro.setVelocityY(-200)
+  } else if (this.cursors.down.isDown) {
+    this.carro.setVelocityY(200)
+  }
+}
+```
+
+Vamos analisar o código:
+* Linha 9: desabilitamos o debug da física, para não aparecer as bordas físicas do objeto e nem o indicador da velocidade.
+* Linhas de 19 a 25: carregamos o mapa json e as imagens do jogo.
+* Linha 29: criação do tilemap.
+* Linha 34: criação do tileset.
+* Linhas 36 a 40: criação dos layer (camadas).
+* Linha 42: criação do carro com um corpo físico.
+* Linha 44: habilitamos os tiles de colisão do terreno. Apenas os tiles com a propriedade ``colisao`` marcada como ``true``.
+* Linha 48: habilita colisão do carro com o terreno.
+* Linhas 50 a 52: Faz a câmera seguir o carro.
+* Linha 54: cria o cursos para controlar o carro pelas setas do teclado.
+* Linhas 59 a 68: controla o carro com as setas do teclado.
+
+Perceba que agora não estamos alterando a escala das camadas.
+O resultado será:
+
+![fig 59](resources/img/fig059.png)
