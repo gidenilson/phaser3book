@@ -137,13 +137,13 @@ Nas linha de 29 a 31 ajustamos a escala dos layers para caber na tela que defini
 
 ## Layer de objetos
 
-Podemos ter no tilemap um layer para marcar posição de objetos no mapa. No próximo exemplo iremos criar um layer de objetos no Tiled e exportar novamente o JSON. Então usaremos a camada de objetos do novo mapa para posicionar algumas joias no mundo. Você pode também assistir o vídeo sobre como criar layers de objetos em <https://youtube.com/xxxxxxxxx>
+Podemos ter no tilemap um layer para marcar posição de objetos no mapa. No próximo exemplo iremos criar um layer de objetos no Tiled e exportar novamente o JSON. Então usaremos a camada de objetos do novo mapa para posicionar algumas joias no mundo. Você pode também assistir o vídeo sobre como criar layers de objetos em <https://youtu.be/NgoEUH_FWvA>
 
 Primeiro criamos uma camada de objetos:
 
 ![fig 46](resources/img/fig046.png)
 
-Chamados essa camada de ``joia`` e a arrastamos para o topo das camadas, acima de ``pista``. Para o Phaser, não importa em que nível esteja a camada de objetos, mas para nossa visualização no Tiled, deixamos acima das outras.
+Chamamos essa camada de ``joia`` e a arrastamos para o topo das camadas, acima de ``pista``. Para o Phaser, não importa em que nível esteja a camada de objetos, mas para nossa visualização no Tiled, deixamos acima das outras.
 
 ![fig 47](resources/img/fig047.png)
 
@@ -255,7 +255,7 @@ Num mapa de jogo sempre temos elementos de colisão, tais como paredes, chão, o
 A ideia é criar uma propriedade booleana personalizada no tileset (por exemplo "colisao") e marcar alguns tiles específicos com o valor de ``colisão = true``. Feito isso podemos, dentro do Phaser, fazer com que objetos do jogo colidam com esses tiles marcados.
 
 Vamos ao passo a passo:
-[Um vídeo tutorial está disponível em <https://youtube.com/xxxxxxxxxx>]
+[Um vídeo tutorial está disponível em <https://youtu.be/jiVNp0V-m5Y>]
 
 Clique no botão ``Editar Tileset``.
 

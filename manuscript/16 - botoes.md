@@ -59,7 +59,7 @@ Na linha 5 chamamos o método ``setInteractive()`` para habilitar a escuta dos e
 
 Nas linha de 6 a 9 definimos que frame do spritesheet será utilizado em cada estado do mouse. Iremos padronizar que os spritesheets dos botões terão 3 frames. Um para o estado normal, outro para o estado pointerover, e outro para o estado pointerdown. Para o estado pointerup utilizaremos o mesmo frame do estado pointerup.
 
-Na linha 11 disparamos o evento personalizado ``click`` para podermos 'escutá-lo' no game.
+Na linha 11 disparamos o evento personalizado ``click`` para podermos 'escutá-lo' no game [todos os objetos do Phaser podem emitir eventos por meio do método ``on(event, fn [, context])``].
 
 Na última linha exportamos nossa classe como um módulo.
 
