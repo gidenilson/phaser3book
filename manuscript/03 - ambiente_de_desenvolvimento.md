@@ -41,4 +41,4 @@ Nos nossos exemplos o procedimento para testar o jogo será sempre este:
 2. Executar o comando ``http-server``.
 3. Abrir o browser em ``http://localhost:8080/index.html``
 
-Você encontra um pequeno vídeo tutorial em <https://yotube.com/xxxxxx>
+Você encontra um pequeno vídeo tutorial em <https://youtu.be/XfQrsBQAu-k>
