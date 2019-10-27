@@ -114,3 +114,15 @@ Não esqueça de alterar o nome o script no arquivo html.
 ```
 
 Isto é só um exemplo para você começar a perceber o que pode ser feito com o Phaser. Se este código não está claro agora para você, não se preocupe; vamos ver o que significa tudo isso no decorrer do curso.
+
+## setOrigin([x] [,y])
+
+Todos os objetos do Phaser têm um ponto de origem a partir do qual ocorre o posicionamento na tela, a rotação e etc.
+Esse ponto de origem de divide em originX, que é a posição de origem em relação ao eixo horizontal, e originY, que é a posição em relação ao eixo vertical.
+O valor padrão da origem X e Y é 0.5, isso significa que todos os objetos são posicionados com base no seu centro.
+Se definirmos a originX como 0 o ponto de origem horizontal passa a ser o canto esquerdo do objeto, e se o valor for definido para 1 a origem horizontal passa a ser o lado direito do objeto.
+No eixo vertical, definido em originY, o valor 0 faz que a origem do objeto passe a ser o topo, enquanto que o valor 1 define a origem para a base inferior do objeto.
+
+Para definirmos o ponto de origem dos objetos chamamos o método ``setOrigin( [x] [, y])``. Podemos tambem chamar esse método passando apenas 1 valor. Nesse caso estaremos definindo originX e originY com o mesmo valor passado.
+
+![fig 6c](resources/img/fig006c.png)
