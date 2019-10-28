@@ -64,3 +64,69 @@ No método ``create`` definimos valores para o objeto de dados que foi criado em
 Na linha 16 passamos o controle para a scene ``Preloader``.
 
 E na linha 20 exportamos o módulo para que possa ser carregado no arquivo ``game.js``.
+
+## scenes/PreloaderScene.js
+
+![fig 66](resources/img/fig066.png)
+
+Nas 3 primeiras linhas declaramos a classe herdando de ``Phaser.Scene`` e passando o nome da scene com o método ``super``. Estas primeiras linhas são semelhantes para todas as scenes criadas.
+
+### método ``preload()``
+
+No método ``preload()`` adicionamos todos os assets do game à fila de carregamento. Nesse método podemos também monitorar esse carregamento sendo possível assim criar barras de progresso e mostrar o carregamento dos assets.
+
+Na linha 12 carregamos a imagem do tileset do tilemap. Lembrando que o primeiro parâmetro é sempre a ``key`` pela qual iremos chamar o assets quando necessário.
+
+![tuxmon.png](resources/img/tuxmon.png)
+
+Na linha 15 carregamos o ``map.json`` que exportamos do Tiled, atribuindo uma ``key`` "map". Perceba que para criar o tilemap os 2 arquivos, o tileset e o json, são carregados separadamente.
+
+Na linha 17 carregamos o spritesheet da "beth". Nos parâmetros ``frameWidth`` e ``frameHeight`` passamos as dimensões de cada sprite desse spritesheet. É a partir dessas dimensões que o Phaser irá "separar" cada frame do spritesheet.
+
+![beth.png](resources/img/betty.png)
+
+Na linha 24 caregamos uma imagem que será utilizada na scene dos créditos.
+
+![creditos.png](resources/img/creditos.png)
+
+Na linha 27 carregamos outro spritesheet: as moedas.
+
+![moedas.png](resources/img/coins.png)
+
+![fig 67](resources/img/fig067.png)
+
+Na linha 32 carregamos o spritesheet do inimigo.
+
+![inimigo.png](resources/img/enemy.png)
+
+Nas linhas 39 a 57 carregamos os sons do game. O método ``this.load.audio(key, audio.ogg, audio.mp3) recebe como primeiro argumento a ``key`` pala qual acessaremos o som posteriormente, o segundo parâmetro é o caminho para o arquivo de áudio no formato ``ogg``, e o último parâmetro o caminho para o mesmo som, porém no formato ``mp3``. O fornecimento dos sons nos 2 formatos (ogg e mp3) serve para garantir que o browser poderá tocar o som num formato ou em outro.
+
+![fig 68](resources/img/fig068.png)
+
+Nas linhas 61 a 62 declaramos as constantes width e height com a largura e altura do canvas do game respectivamente.
+
+Na linha 65 colocamos o logo na tela, lembrando que a imagem do logo foi carregada previamente em ``SceneBoot``, assim como a barra de progresso.
+
+Na linha 68 colocamos na tela a barra de progresso utilizando como referência as constantes ``width`` e ``height``.
+
+Na linha 70 definimos o ponto de origem na barra de progresso para o topo do canto esquerdo. Isso é necessário para que o redimensionamento desta barra que será feito durante o carregamento dos assets tenha como origim o início da barra de progresso.
+
+Nas linhas 73 criamos um texto para mostrar a porcentagem do carregamento. Este texto também é posicionado na tela tomando como referência as constantes ``width`` e ``height``. Perceba que estamos utilizando a webfonte "PressStart2P", que foi carregada lá no nosso ``index.html``. Na linha 82 definimos a origem do texto como sendo o centro do mesmo (essa linha é desnecessária já que por padrão o pivô dos objetos é o centro mesmo).
+
+![fig 69](resources/img/fig069.png)
+
+Nas linhas 85 a 93 colocamos na tela outro texto para mostrar o nome do asset que está sendo carregado.
+
+Nas linhas 96 a 98 criamos um evento do tip ``progress`` para "escutar" o carregamento dos assets. A função callback vai atualizar a escala da barra de progresso e a porcentagem de carregamento dos assets.
+
+Nas linha 102 e 103 criamos outro evento, do tipo ``fileprogress``. A função callback vai atualizar o texto com o nome dos assets conforme vão sendo carregados.
+
+E nas linhas de 107 a 110 criamos mais um evento agora do tipo ``complete`` cuja função callback destrói a barra de progresso e os textos de porcentagem e nome do asset.
+
+### Método ``create()``
+
+![fig 70](resources/img/fig070.png)
+
+Depois de carregados todos os assets, o método ``create`` é chamado automaticamente. Dentro deste método definimos um objeto ``time`` do Phaser para chamar a próxima scene depois de meio segundo. Esse delay é puramente "estético", ele evita que, caso os assests sejam carregados muito rápido, a tela de preload passe despercebida.
+
+Finalmente, na linha 120, exportamos a classe para que possa ser importada no arquivo ``game.js``
