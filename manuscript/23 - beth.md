@@ -130,3 +130,122 @@ E nas linhas de 107 a 110 criamos mais um evento agora do tipo ``complete`` cuja
 Depois de carregados todos os assets, o método ``create`` é chamado automaticamente. Dentro deste método definimos um objeto ``time`` do Phaser para chamar a próxima scene depois de meio segundo. Esse delay é puramente "estético", ele evita que, caso os assests sejam carregados muito rápido, a tela de preload passe despercebida.
 
 Finalmente, na linha 120, exportamos a classe para que possa ser importada no arquivo ``game.js``
+
+## scenes/MenuScene.js
+
+![fig 71](resources/img/fig071.png)
+
+![fig 72](resources/img/fig072.png)
+
+Depois de carregar todos os assets paramos nesta scene onde temos 2 botões: ``[iniciar]`` e ``[créditos]``.
+
+Nas 2 primeiras linhas importamos as classes ``Botao`` e ``Audio`` (essas classes serão estudadas posteriormente).
+
+Nas linhas 3 a 4, ``constructor()``, criamos a classe ``MenuScene`` que herda de ``Phaser.Scene``, e passamos o nome da scene chamando o método ``super``.
+
+Nas linhas de 8 a 11 temos o método ``init()`` que por padrão é o primeiro a ser executado automaticamente quando a scene iniciar. Dentro deste método instanciamos a classe ``Audio`` e anexamos ao objeto de dados do jogo (aquele objeto criado no ``game.js``). Criamos também uma variável da scene, ``this.audio`` e colocamos o objeto de áudio criado.
+
+Nas linhas 13 e 14 criamos as constantes ``width`` e ``height`` com as dimensões da tela.
+
+Nas linhas 18 e 19 criamos a variável ``this.btnIniciar`` instanciando a classe ``Botao``, que será vista adiante. Posicionamos o botao na tela tendo como referência as constantes ``width`` e ``height``. Na linha 20 definimos o valor ``Game`` para a propriedade ``target`` do botão criado. Isso fará com que ao ser pressionado o game passe para a scene com o nome ``Game``.
+
+Nas linhas 23 a 25 criamos outro botão, para navegar até a scene ``Credits``.
+
+Nas linhas 28 a 30 tocamos a música de espera com o volume em 30% e em loop.
+
+E por fim, na linha 35 exportamos a classe.
+
+## scenes/CreditsScene.js
+
+![fig 73](resources/img/fig073.png)
+
+Esta scene é nossa tela de créditos, nela colocamos a imagem com os créditos e um botão para acessar o menu. O código dispensa comentários.
+
+## scenes/GameScene.js
+
+Esta é a scene onde o game acontece.
+
+![fig 74](resources/img/fig074.png)
+
+Até a linha 12 carregamos as classes e estendemos a classe Phaser.Scene da mesma forma como nas outras scenes.
+
+### Método ``create()``
+
+![fig 75](resources/img/fig075.png)
+
+Na linha 16 colocamos a string ``jogando`` no objeto de dados do game.
+
+Na linha 19 recuperamos o objeto ``audio`` para gerenciar as músicas nesta scene. Na linha 20 paramos a música de espera, e nas linhas de 21 a 23 tocamos a música do game.
+
+![fig 76](resources/img/fig076.png)
+
+Nas linhas de 28 a 40 instanciamos os objetos do game. Cada um desses objetos está implementado num arquivo separado por questões de organização do código do nosso game. Veremos cada classe mais adiante.
+
+![fig 77](resources/img/fig077.png)
+
+Nas linhas 43 e 44 posicionamos a personagem na posição inicial. Esta posição vem de um objeto específico no JSON do tilemap. Este código ficará claro quando estudarmos a classe ``Mundo``.
+
+Nas linhas 46 a 48 habilitamos as colisões entre a personagem e as camadas (layers) do tilemap.
+
+Nas linhas de 51 a 54 habilitamos a câmera do game a acompanhar a personagem.
+
+![fig 78](resources/img/fig078.png)
+
+Na linha 57 instanciamos a classe ``GrupoMoedas``. O segundo parâmetro deste constructor é um array com os objetos moedas vindos do JSON do tilemap.
+
+Nas linhas 60 a 62 instanciamos o gerenciador de colisões e atribuimos 2 eventos que serão executados quando as moedas acabarem e quando o inimigo pegar a personagem. O callback desses eventos está definido na classe ``Estados`` que estudaremos a seu tempo.
+
+Nas linhas 65 e 66 definimos um callback a ser chamado quando houver sobreposição das moedas com a personagem. O método ``this.colisoes.bethMoedas(b)`` irá tratar esse evento, como veremos adiante.
+
+Nas linhas 69 e 70 fazemos o mesmo para a sobreposição do inimigo e a personagem.
+
+### Método ``update()``
+
+![fig 79](resources/img/fig079.png)
+
+O método ``update()`` é executado a cada frame do game a 60fps (60 frames por segundo). Neste método atualizamos os objetos ``beth`` e ``inimigo`` caso o estado do jogo seja "jogando".
+
+Na linha 81 exportamos a scene.
+Podemos perceber que o código da ``SceneGame`` é relativamente pequeno para um jogo. Isso é porque a lógica do game está distribuída nas classes dos objetos do jogo que iremos estudar em seguida. Mas antes vamos olhar rapidamente o código do script ``config/phaser.js``.
+
+## config/phaser.js
+
+![fig 80](resources/img/fig080.png)
+
+Vejamos o significado de cada propriedade deste objeto de configuração:
+
+### type
+
+Phaser.AUTO
+
+Deixa o Phaser escolher automaticamente o modo de renderização.
+
+### backgroundColor
+\#fcf8e8
+
+Como o nome sugere é a cor de fundo do canvas do game.
+
+### pixelArt
+
+true
+
+Esta propriedade sendo true define que o Phaser vai deixar o game com aspecto pixelado quando as imagens são renderizadas com escalas aplicadas.
+
+### physics
+
+Aqui configuramos a física do jogo para "arcade", que é um dos motores de física suportados disponíveis no Phaser.
+
+### scale
+
+#### mode: Phaser.Scale.FIT
+
+Define que o canvas do game será redimensionado para o preenchar o tamanho da tela do dispositivo.
+
+#### autoCenter: Phaser.Scale.CENTER_BOTH
+
+Define que o cavas ficará centralizado horizontal e verticalmente.
+
+#### width: 800
+Largura do canvas.
+
+#### height: altura do canvas.
