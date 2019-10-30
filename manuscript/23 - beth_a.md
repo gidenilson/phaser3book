@@ -1,6 +1,6 @@
 # Beth
 
-O primeiro game que iremos estudar é um jogo topdown (vista de cima) onde nossa personagem precisa coletar as moedas enquanto foge do inimigo. Antes de começar o estudo é importante que você baixe o código do jogo e jogue um pouco para conhecer o que iremos estudar.
+O primeiro game que iremos estudar é um jogo topdown (vista de cima) onde nossa personagem precisa coletar as moedas enquanto foge do inimigo. Antes de começar o estudo é importante que você baixe o código do jogo e jogue um pouco para conhecer o que iremos estudar. Nosso método de estudo será pela análise e comentários sobre o código pronto. Enquanto vai avançando na leitura, dedique um tempo para olhar dentro do código do jogo, fazendo testes.
 
 ![fig 61](resources/img/fig061.png)
 
@@ -249,3 +249,50 @@ Define que o cavas ficará centralizado horizontal e verticalmente.
 Largura do canvas.
 
 #### height: altura do canvas.
+
+## classes/Beth.js
+
+Vamos agora analisar uma das classes mais importantes do jogo, que é a classe ``Beth`` que define o player do jogo.
+
+### O que está classe faz?
+
+* Se auto adiciona na scene.
+* Cria um corpo físico.
+* Redimensiona o corpo físico para melhor efeito de colisão com os objetos.
+* Ajusta a profundidade da Beth na scene.
+* Cria as animações para a Beth.
+* Movimenta a personagem com o uso das setas do teclado.
+* Ajusta a animação da personagem de acordo com o estado.
+
+![fig 81](resources/img/fig081.png)
+
+Nas primeiras linhas criamos a classe ``Beth`` herdando de ``Phaser.GamObjects.Sprite``. Como a personagem conterá animações, precisamos criá-la com sprite. No ``constructor`` recebemos 4 parâmetros: a scene, as posições x e y, e a texture (que é a ``key`` do sprite que carregamos na scene ``PreloaderScene``).
+
+Na linha 6 adicionamos a própria instância da classe na scene. Na linha 7 habilitamos o corpo físico da personagem, e nas linhas 8 e 9 redimensionamos esse corpo físico para dar um melhor efeito na colisão com os objetos.
+
+Na linha 10 ajustamos a profundidade da personagem.
+
+Na linha 11 chamamos o método ``criarAnimacoes()`` que veremos adiante. Na linha 13 criamos a variável ``this.cursors`` que recebe uma instância do objeto de cursor do teclado. Este objeto será utilizado no médoto ``update()`` da scene.
+
+Na linha 145 exportamos nossa classe.
+
+### Método ``update()``
+
+![fig 82](resources/img/fig082.png)
+
+Na linha 16 definimos inicialmente a velocidade do personagem como zero, tanto em X como em Y.
+Na linha 17 testamos se o estado do game é "jogando". Caso não seja, abandonamos o método ``update()`` sem fazer mais nada.
+
+![fig 83](resources/img/fig083.png)
+
+Nas linhas 20 a 43 desenvolvemos a lógica do movimento da personagem de acordo com a seta do teclado pressionada. A lógica consiste em ajustar a velocidade x e y, e também definir uma animação de acordo com a seta pressionada. Também utilizamos o método ``setData(key, value)`` para marcar a direção em que a personagem se move.
+
+![fig 84](resources/img/fig084.png)
+
+Se nenhuma seta estiver pressionada, as linhas de 46 a 57 fazem a personagem parar definindo a velocidade x e y para zero. Em seguida a animação da personagem é definida de acordo com o valor da propriedade "direcao", que foi definida no bloco anterior.
+
+![fig 85](resources/img/fig085.png)
+
+No método ``criarAnimacoes()``, a partir da linha 61, criamos todas as animações da personagem conforme já vimos em capítulos anteriores.
+
+Você pode observar que a maior quantidade de linha de código é para criar as animações, mas por outro lado é um código simples e só é extenso porque são muitas animações. Por isso é uma boa prática criar as animações dentro da própria classe ou criar uma classe exclusiva para criar todas as animações do game. Nós optamos pelo primeiro modo.

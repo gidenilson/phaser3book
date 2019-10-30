@@ -21,4 +21,5 @@
 20 - fisica.md
 21 - tilemap.md
 22 - cenas.md
-23 - beth.md
+23 - beth_a.md
+24 - beth_b.md

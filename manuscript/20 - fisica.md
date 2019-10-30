@@ -112,7 +112,7 @@ function update() {
 
 Agora podemos movimentar a bola acionando as setas do teclado. O resultado visual é...
 
-![fig 30](resources/img/fig030.png)
+![fig 30a](resources/img/fig030a.png)
 
 A caixa vermelha em volta da bola é o corpo da física, e o traço verde indica a direção da velocidade. Isto está aparecendo porque nós habilitamos o debug da física no objeto de configuração do Phaser.
 
@@ -238,3 +238,10 @@ function create() {
   this.cursors = this.input.keyboard.createCursorKeys()
 }
 ```
+
+### Dimensões do corpo físico.
+
+Por padrão o tamanho (size) do corpo físico é o tamanho da imagem ou objeto, mas as vezes vamos querer ajustar esse tamanho. Por exemplo quando temos uma personagem e queremos que a colisão com os objetos ocorra só na altura dos pés.
+Esse redimensionamento é feito com 2 métodos: ``body.setSize(largura, altura)`` e ``body.setOffset(x, y)``. Trabalhando com esse métodos podemos ajudar a posição e o tamanho do corpo físico de qualquer objeto.
+
+![fig 30b](resources/img/fig030b.png)
