@@ -25,4 +25,6 @@
 24 - beth_b.md
 25 - beth_c.md
 26 - flyingbee.md
-27 - chicken.md
+27 - chicken_a.md
+28 - chicken_b.md
+29 - chicken_c.md
