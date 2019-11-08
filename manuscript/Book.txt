@@ -28,3 +28,5 @@
 27 - chicken_a.md
 28 - chicken_b.md
 29 - chicken_c.md
+30 - flyingbee.md
+31 - conclusao.md

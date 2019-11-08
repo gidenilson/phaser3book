@@ -1,6 +1,13 @@
 # Prefácio
 
+# Dedicatória
+
+Primeiramente minha gratidão a Deus que me proporcionou a oportunidade de escrever esse livro e fazer muitas outras coisas.
+
+À minha esposa Tânia e aos meus filhos pelo apoio de sempre.
+
 # Sobre o livro
+
 O objetivo deste livro é iniciar o leitor na criação de jogos 2D, em HTML2 e Javascript, com o framework Phaser.
 
 Esse livro deve ser lido por quem está pelo menos familiarizado com Javascript nos seguintes aspectos:
