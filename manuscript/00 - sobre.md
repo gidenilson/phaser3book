@@ -1,3 +1,12 @@
+
+# Autor
+
+![Gidenilson A Santigo](resources/img/gidenilson.jpg)
+
+Gidenilson Alves Santiago nasceu no 'ano que não acabou' (1968). Aos 15 anos ganhou do seu tipo o microcomputador com 16K de RAM e processador Z-80. Iniciou seus estudos de programação, aos 15 anos, em BASIC lendo o manual do micro. Ao esgotar o estudo do BASIC partiu para ASSEMBLY Z-80. Seu próximo micro foi u TK2000 da Microdigital que era bem mais poderoso com incríves 64K de RAM. Como já fizera antes, aprendeu a programar o BASIC e depois a linguagem ASSEMBLY do processador 6502.
+
+Desde então o autor vem acompanhando o desenvolvimento da programação, sendo programador backend (PHP) e frontend (Javascript), tendo trabalhado em empresas de software e como freelancer. Atualmente se dedica ao estudo de JavaScript, jogos 2D e jogos educativos com destaque para educação musical.
+
 # Prefácio
 
 # Dedicatória
