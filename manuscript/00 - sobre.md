@@ -8,12 +8,6 @@ Gidenilson Alves Santiago nasceu no 'ano que não acabou' (1968). Aos 15 anos ga
 Desde então o autor vem acompanhando o desenvolvimento da programação, sendo programador backend (PHP) e frontend (Javascript), tendo trabalhado em empresas de software e como freelancer. Atualmente se dedica ao estudo de JavaScript, jogos 2D e jogos educativos com destaque para educação musical.
 Paralelamente o autor é músico e habilitado em educação musical pela Universidade Federal de São Carlos - UFSCar.
 
-# Dedicatória
-
-Primeiramente minha gratidão a Deus que me proporcionou a oportunidade de escrever esse livro e fazer muitas outras coisas.
-
-À minha esposa Tânia e aos meus filhos pelo apoio de sempre.
-
 # Prefácio
 
 Em um mundo de acentuados avanços tecnológicos, um dos mercados que mais cresce é o de jogos eletrônicos. Com isto em vista, mais e mais pessoas se aventuraram no estudo do desenvolvimento de jogos de todos os gêneros, modalidades e em diferentes plataformas. Além de novos jogos, novas formas de desenvolvê-los e projetá-los foram surgindo. Uma destas formas é o uso de frameworks, e neste livro você aprenderá como usar o Phaser para desenvolver seus próprios jogos. A escolha do Phaser é devida ao intuito do autor em usar ferramentas gratuitas, acessíveis a qualquer um que quiser iniciar seus estudos em desenvolvimento de jogos sem gastar muito. Para o autor, usar ferramentas de baixo custo e fácil acesso contribui para a democratização do conhecimento, viabilizando a mais pessoas prosseguirem seus estudos sem se preocupar com grandes gastos em ferramentas de trabalho, pesquisa e lazer. Criar jogos é uma atividade que pode ser muito divertida e cativante, e neste livro você poderá iniciar seus estudos, ou aprender mais sobre esta poderosa ferramenta de criação de jogos que é o Phaser. Bom proveito e boa leitura!
